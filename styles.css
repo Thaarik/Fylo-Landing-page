@@ -103,6 +103,7 @@ textone h1 {
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
+    margin:0;
 }
 
 .textone h1 {
@@ -142,7 +143,7 @@ textone h1 {
 .testimonial #quotetext {
     font-size: 12px;
     line-height: 1.5em;
-    ;
+    
 }
 
 .testimonial .profile p {
@@ -176,6 +177,7 @@ textone h1 {
     justify-content: space-between;
     flex: 1 1 0px;
     padding: 40px;
+    margin:0;
 }
 
 .emailBox {
@@ -219,7 +221,7 @@ footer {
     justify-content: space-around;
     align-items: center;
     padding: 30px;
-
+    margin:0;
 }
 
 .logo img {
