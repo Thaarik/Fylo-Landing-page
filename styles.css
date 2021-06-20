@@ -1,0 +1,337 @@
+/* <!-- Feel free to remove these styles or customise in your own stylesheet 👍 --> */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+/* header */
+body {
+    margin: 0 auto;
+    padding: 0;
+    font-family: Open Sans, sans-serif;
+    font-weight: 400;
+    max-width: 1440px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 10px;
+    font-family: Raleway, sans-serif;
+    font-weight: 400;
+}
+
+.navbar {
+    display: flex;
+    flex-grow: 0.2;
+    justify-content: space-around;
+}
+
+.navbar .navbutton {
+    padding-top: 10px;
+}
+
+.navbutton a {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* main */
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.partone,
+.parttwo {
+    display: flex;
+    padding: 20px;
+}
+
+.emailformone {
+    display: flex;
+}
+
+.email {
+    -webkit-appearance: none;
+    width: 100%;
+    max-width: 350px;
+    padding: 0.8em;
+    outline: none;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    background: #f9f9f9;
+    transition: bakground 0.25s, border-color 0.25s, color 0.25s;
+    margin-right: 10px;
+}
+
+#email:focus {
+    background-color: #ffffff;
+}
+
+#email::placeholder {
+    color: #bbbbbb;
+}
+
+.submit {
+    width: 100%;
+    max-width: 200px;
+    min-height: 40px;
+    background-color: hsl(224, 93%, 58%);
+    border-radius: 4px;
+    color: #dddddd;
+    cursor: pointer;
+    border: 1px solid hsl(224, 92%, 67%);
+}
+
+.submit:hover {
+    background-color: hsl(224, 100%, 75%);
+}
+
+textone h1 {
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+}
+
+.textone p {
+    font-size: 15px;
+}
+
+.parttwo {
+    background-image: url("images/bg-curve-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+}
+
+.textone h1 {
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+}
+
+.texttwo p {
+    font-size: 15px;
+}
+
+.texttwo a {
+    color: hsl(170, 45%, 43%);
+}
+
+.texttwo a:hover {
+    color: hsl(170, 35%, 56%);
+}
+
+
+.testimonial {
+    margin-top: 40px;
+    max-width: 300px;
+    min-height: 150px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px hsl(0, 0%, 75%);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    font-family: Raleway, sans-serif;
+}
+
+.testimonial #quotes {
+    width: 10px;
+}
+
+.testimonial #quotetext {
+    font-size: 12px;
+    line-height: 1.5em;
+    ;
+}
+
+.testimonial .profile p {
+    font-size: 12px;
+}
+
+.testimonial .profile {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.testimonial .profile .details {
+    padding-left: 10px;
+}
+
+.testimonial .profile .details :first-child {
+    font-weight: 700;
+}
+
+.testimonial .profile img {
+    border-radius: 50%;
+    max-width: 50px;
+}
+
+.partthree {
+    background-color: hsl(238, 22%, 44%);
+    color: white;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex: 1 1 0px;
+    padding: 40px;
+}
+
+.emailBox {
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 300px;
+    padding: 0.8em;
+    outline: none;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    background: #f9f9f9;
+    transition: bakground 0.25s, border-color 0.25s, color 0.25s;
+
+}
+
+.textthree {
+    max-width: 400px;
+}
+
+.texttwo p {
+    font-size: 15px;
+}
+
+.imageone img {
+    max-width: 100%;
+    height: auto;
+    /* padding: 20px; */
+}
+
+.imagetwo img {
+    max-width: 100%;
+    height: auto;
+    /* padding-left: 20px; */
+}
+
+/* footer */
+footer {
+    display: flex;
+    background-color: hsl(243, 87%, 12%);
+    color: white;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+
+}
+
+.logo img {
+    width: 150px
+}
+
+.phone,
+.emailfooter {
+    display: flex;
+    align-items: center;
+}
+
+.phone .phonenum {
+    padding-left: 10px;
+}
+
+.emailfooter .emailadd {
+    padding-left: 10px;
+}
+
+.boxtwo ul {
+    list-style: none;
+}
+
+.social {
+    display: flex;
+    justify-content: space-between;
+    min-width: 100px;
+}
+
+.social a {
+    text-decoration: none;
+    color: #dddddd;
+}
+
+.social a:hover {
+    color: aqua;
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        text-align: center;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .partone,
+    .parttwo {
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .emailformone {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .email {
+        margin: 10px
+    }
+
+    #submit {
+        min-width: 280px;
+    }
+
+    .parttwo {
+        background-image: url("images/bg-curve-mobile.svg");
+        margin: 50px 0px;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: cover;
+    }
+
+    .parttwo h1,
+    .partthree h1 {
+        font-size: medium;
+    }
+
+    .partthree {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .textthree,
+    .emailformtwo {
+        text-align: center;
+        margin: 10px auto;
+    }
+
+    .testimonial {
+        margin: 30px auto;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .boxone,
+    .boxtwo,
+    .boxthree {
+        padding-top: 20px;
+    }
+
+    footer .social {
+        padding-top: 30px;
+        margin: 0 auto;
+        cursor: pointer;
+    }
+}

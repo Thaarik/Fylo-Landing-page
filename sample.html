@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+    /* header */
+    body {
+      margin: 0 auto;
+      padding: 0;
+      font-family: Open Sans, sans-serif;
+      font-weight: 400;
+      max-width: 1440px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px 10px;
+      font-family: Raleway, sans-serif;
+      font-weight: 400;
+    }
+
+    .navbar {
+      display: flex;
+      flex-grow: 0.2;
+      justify-content: space-around;
+    }
+
+    .navbar .navbutton {
+      padding-top: 10px;
+    }
+
+    .navbutton a {
+      text-decoration: none;
+      color: black;
+    }
+
+
+    /* main */
+    main {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .partone,
+    .parttwo {
+      display: flex;
+      padding: 20px;
+    }
+
+    .emailformone {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .emailformone>*
+
+    /*every single descendant child or direct child of the form item */
+      {
+      align-self: flex-start;
+    }
+
+    .email {
+      -webkit-appearance: none;
+      width: 100%;
+      max-width: 325px;
+      padding: 0.8em;
+      outline: none;
+      border: 1px solid #dddddd;
+      border-radius: 4px;
+      background: #f9f9f9;
+      transition: bakground 0.25s, border-color 0.25s, color 0.25s;
+    }
+
+    .email:focus {
+      background-color: #ffffff;
+    }
+
+    .email::placeholder {
+      color: #bbbbbb;
+    }
+
+    .email_input_error {
+      color: #d50000;
+      background: #fff8f8;
+      border-color: #d50000;
+    }
+
+    .email_input_error::placeholder {
+      color: #ffbfbf;
+    }
+
+    .email_error {
+      padding-top: 10px;
+      color: #d50000;
+      font-size: 0.9em;
+      visibility: hidden;
+    }
+
+    .email_input_error + .email_error {
+      visibility: visible;
+    }
+
+    .email_btn{
+      font-family: Raleway, sans-serif;
+      font-weight:700;
+      font-size: 0.6em;
+      padding:10px 20px;
+      margin:10px 0;
+      border-radius: 4px;
+      color:#ffffff;
+      background-color:hsl(224, 93%, 58%) ;
+      border:1px solid hsl(224, 69%, 57%) ;
+      cursor:pointer;
+      outline:none;
+    }
+    .email_btn:active{
+      background-color:hsl(224, 76%, 65%) ;
+    }
+    textone h1 {
+      font-family: Raleway, sans-serif;
+      font-weight: 700;
+    }
+
+    .textone p {
+      font-size: 15px;
+    }
+
+    .parttwo {
+      background-image: url("images/bg-curve-desktop.svg");
+      background-size: 150% 100%;
+      background-position: center;
+      padding-top: 150px;
+    }
+
+    .textone h1 {
+      font-family: Raleway, sans-serif;
+      font-weight: 700;
+    }
+
+    .texttwo p {
+      font-size: 15px;
+    }
+
+    .texttwo a {
+      color: hsl(170, 45%, 43%);
+    }
+
+    .texttwo a:hover {
+      color: hsl(170, 35%, 56%);
+    }
+
+
+    .testimonial {
+      margin-top: 40px;
+      max-width: 300px;
+      min-height: 150px;
+      border-radius: 5px;
+      box-shadow: 0px 0px 20px hsl(0, 0%, 75%);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      font-family: Raleway, sans-serif;
+    }
+
+    .testimonial #quotes {
+      width: 10px;
+    }
+
+    .testimonial #quotetext {
+      font-size: 12px;
+      line-height: 1.5em;
+      ;
+    }
+
+    .testimonial .profile p {
+      font-size: 12px;
+    }
+
+    .testimonial .profile {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .testimonial .profile .details {
+      padding-left: 10px;
+    }
+
+    .testimonial .profile .details :first-child {
+      font-weight: 700;
+    }
+
+    .testimonial .profile img {
+      border-radius: 50%;
+      max-width: 50px;
+    }
+
+    .partthree {
+      background-color: hsl(238, 22%, 44%);
+      color: white;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex: 1 1 0px;
+    }
+
+    .textthree {
+      max-width: 400px;
+    }
+
+    .texttwo p {
+      font-size: 15px;
+    }
+
+    .imageone img {
+      max-width: 100%;
+      height: auto;
+      /* padding: 20px; */
+    }
+
+    .imagetwo img {
+      max-width: 100%;
+      height: auto;
+      /* padding-left: 20px; */
+    }
+
+    /* footer */
+    footer {
+      display: flex;
+      background-color: hsl(243, 87%, 12%);
+      color: white;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .phone,
+    .email {
+      display: flex;
+      align-items: center;
+    }
+
+    .phone .phonenum {
+      padding-left: 10px;
+    }
+
+    .email .emailadd {
+      padding-left: 10px;
+    }
+
+    @media only screen and (max-width: 375px) {
+      header {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .navbar {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .partone,
+      .parttwo {
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+
+      .parttwo {
+        background-image: url("images/bg-curve-mobile.svg");
+        margin: 50px 0px;
+      }
+
+      .parttwo h1,
+      .partthree h1 {
+        font-size: medium;
+      }
+
+      .partthree {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+      }
+
+      footer {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/logo.svg" alt="logo" />
+    </div>
+    <div class="navbar">
+      <div class="navbutton"><a href="#">Features</a></div>
+      <div class="navbutton"><a href="#">Team</a></div>
+      <div class="navbutton"><a href="#">Sign In</a></div>
+    </div>
+  </header>
+  <!-- ------------------------------------------------- -->
+  <main>
+    <div class="partone">
+      <div class="textform">
+        <div class="textone">
+          <h1>
+            All your files in one secure location, accessible anywhere.
+          </h1>
+          <p>Fylo stores your most important files in one secure location.
+            Access them wherever you need, share and collaborate with friends,
+            family, and co-workers.</p>
+        </div>
+
+        <form id="emailform" action="./" method="GET" >
+          <div class="emailformone">
+            <label for="email"></label>
+            <input type="text" class="email " id="email" name="email" placeholder="Enter your email" />
+            <span class="email_error" id="email_error"></span>
+            <button class="email_btn" type="submit" onkeydown="validation()">Get Started</button>
+          </div>
+        </form>
+      </div>
+
+
+      <div class="imageone">
+        <img src="images/illustration-1.svg" alt="illustration-1" />
+      </div>
+    </div>
+
+    <div class="parttwo">
+      <div class="testimonialtext">
+        <div class="texttwo">
+          <h1>Stay productive, wherever you are</h1>
+          <p>Never let location be an issue when accessing your files. Fylo has you
+            covered for all of your file storage needs.</p>
+          <p> Securely share files and folders with friends, family and colleagues for
+            live collaboration. No email attachments required!</p>
+          <a href="#">See how Fylo works<img src="images/icon-arrow.svg" alt="arrow"></a>
+        </div>
+
+        <div class="testimonial">
+          <img src="images/icon-quotes.svg" id="quotes" />
+          <p id="quotetext">Fylo has improved our team productivity by an order of magnitude. Since
+            making the switch our team has become a well-oiled collaboration machine.</p>
+          <div class="profile">
+            <div class="profileimg">
+              <img src="images/avatar-testimonial.jpg" alt="profile" />
+            </div>
+            <div class="details">
+              <p>Kyle Burton</p>
+              <p>Founder & CEO, Huddle</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="imagetwo">
+        <img src="images/illustration-2.svg" alt="illustration-2" />
+      </div>
+    </div>
+
+    <div class="partthree">
+      <div class="textthree">
+        <h1>Get early access today</h1>
+        <p> It only takes a minute to sign up and our free starter tier is extremely generous.
+          If you have any questions, our support team would be happy to help you.
+        </p>
+      </div>
+      <div class="emailformtwo">
+        <form>
+          <label for="email" name="email">
+            <input type="email" class="emailBox" />
+            <input type="submit" value="Get Started For Free" id="submit" />
+          </label>
+        </form>
+      </div>
+    </div>
+
+  </main>
+  <!-- ---------------------------------------------------- -->
+  <footer>
+    <div class="boxone">
+      <div class="logo">
+        <svg width="166" height="49" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <defs>
+            <path id="a" d="M.014.03h93.96v48.29H.015z" />
+          </defs>
+          <g fill="none" fill-rule="evenodd">
+            <path
+              d="M0 14.13v.123l27.95 13.13L56 14.209v-.033L27.95 1 0 14.13zm10.077.062L27.95 5.795l17.877 8.397-17.877 8.396-17.874-8.396zM27.95 32.483L0 19.55v4.784l27.95 12.964L56 24.289v-4.784L27.95 32.483zm0 9.703L0 29.25v4.783L27.95 47 56 33.99v-4.784l-28.05 12.98z"
+              fill="#BDBAFA" />
+            <g transform="translate(72)">
+              <mask id="b" fill="#fff">
+                <use xlink:href="#a" />
+              </mask>
+              <path
+                d="M87.56 24.152a8.1 8.1 0 0 0-2.161-5.573 7.259 7.259 0 0 0-2.34-1.673 6.864 6.864 0 0 0-2.85-.601c-1.01 0-1.961.2-2.852.601a7.257 7.257 0 0 0-2.34 1.673 8.102 8.102 0 0 0-2.16 5.574 8.102 8.102 0 0 0 2.16 5.573 7.257 7.257 0 0 0 2.34 1.672 6.864 6.864 0 0 0 2.851.602c1.01 0 1.96-.2 2.852-.602a7.259 7.259 0 0 0 2.339-1.672 8.1 8.1 0 0 0 2.16-5.574zm6.415 0c0 1.932-.357 3.723-1.07 5.373a13.098 13.098 0 0 1-2.94 4.28c-1.247 1.205-2.71 2.156-4.388 2.854-1.678.699-3.468 1.048-5.369 1.048-1.9 0-3.683-.349-5.346-1.048a13.863 13.863 0 0 1-4.366-2.876 13.351 13.351 0 0 1-2.94-4.302c-.713-1.65-1.07-3.426-1.07-5.329 0-1.873.364-3.634 1.092-5.284a13.92 13.92 0 0 1 2.962-4.325 13.671 13.671 0 0 1 4.367-2.898 13.552 13.552 0 0 1 5.301-1.048c1.901 0 3.69.35 5.369 1.048 1.678.698 3.14 1.65 4.388 2.854 1.248 1.204 2.228 2.638 2.94 4.302.713 1.665 1.07 3.449 1.07 5.351zM64.258 36.905a8.6 8.6 0 0 1-1.715.58c-.638.148-1.3.222-1.982.222a9.84 9.84 0 0 1-2.74-.379 6.003 6.003 0 0 1-2.295-1.226c-.653-.565-1.173-1.3-1.56-2.207-.385-.907-.578-2-.578-3.277V.029h6.549v29.474c0 1.07.215 1.806.646 2.207.43.401.943.602 1.537.602.742 0 1.455-.223 2.138-.669v5.262zM50.492 11.22L38.908 41.854c-.861 2.289-1.99 3.939-3.386 4.95-1.396 1.01-3.06 1.515-4.99 1.515-.297 0-.623-.022-.98-.066a7.352 7.352 0 0 1-1.025-.201l-2.138-5.975a8.486 8.486 0 0 0 1.56.557c.534.134 1.039.201 1.514.201 1.01 0 1.93-.23 2.762-.691.832-.46 1.47-1.315 1.916-2.564l.891-2.586-9.935-25.773h6.995l5.925 16.588 5.57-16.588h6.905zM23.538 7.342H6.786v8.294h16.529v5.618H6.785v15.784H.015V1.412h23.524v5.93z"
+                fill="#000" mask="url(#b)" />
+            </g>
+          </g>
+        </svg>
+      </div>
+      <!-- phone -->
+      <div class="phone">
+        <div class="phoneimg">
+          <img src="images/icon-phone.svg" alt="phone" />
+        </div>
+        <div class="phonenum">
+          <p>Phone: +1-543-123-4567</p>
+        </div>
+      </div>
+      <!-- email -->
+      <div class="email">
+        <div class="emailimg">
+          <img src="images/icon-email.svg" alt="phone" />
+        </div>
+        <div class="emailadd">
+          <p> example@fylo.com</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="boxtwo">
+      <ul>
+        <li>About Us</li>
+        <li>Jobs</li>
+        <li>Press</li>
+        <li>Blog</li>
+      </ul>
+    </div>
+
+    <div class="boxthree">
+      <ul>
+        <li>Contact Us</li>
+        <li>Terms</li>
+        <li>Privacy</li>
+      </ul>
+    </div>
+
+    <div class="social">
+      <div class="fb">
+
+      </div>
+      <div class="tweet">
+
+      </div>
+      <div class="ig">
+
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded',function(){
+      document.querySelectorAll('.email').forEach(function(input){
+        input.addEventListener('input',function(){
+          this.className= this.className.replace(/email_input_error ?/,'')
+        })
+      })
+    })
+  //   function validation(){
+  //   var form = document.getElementsById("form");
+  //   var email = document.getElementsById("email").value;
+  //   var text = document.getElementsById("email_error");
+  //   var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+  
+  //   if(email.match(pattern) === false){
+  //    text.innerHTML="Please Enter valid email Address";
+  //    text.style.color="#d50000";
+  //   }else if(email===""){
+  //     text.innerHTML="Please Enter valid email Address";
+  //    text.style.color="#d50000";
+  //   }
+  // }
+  </script>
+</body>
+
+
+</html>

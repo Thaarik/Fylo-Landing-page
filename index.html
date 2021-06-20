@@ -5,66 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
-
+  <title>Fylo landing page with two column layout</title>
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/fc3420a326.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css">
 
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-
-/* header */
-    body {
-      margin: 10px;
-      padding: 0;
-      font-family: Open Sans;
-      font-weight: 400;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .navbar {
-      display: flex;
-      flex-grow: 0.2;
-      justify-content: space-around;
-    }
-
-    .navbar .navbutton {
-      padding-top: 10px;
-    }
-
-    .navbutton a {
-      text-decoration: none;
-      color: black;
-    }
-
-    /* main */
-    main{
-      display: flex;
-      flex-direction: column;
-    }
-
-    .partone,.parttwo,.partthree{
-      display: flex;
-    }
-    .textform,.imageone,.testimonialtext,.imagetwo{
-      border: 1px solid black;
-      flex:1 1 0;
-    }
-   .imageone img{
-      max-width: 100%;
-      height: auto;
-    }
-    .imagetwo img{
-      max-width: 100%;
-      height: auto;
-    }
-  </style>
 </head>
 
 <body>
@@ -90,15 +37,16 @@
             Access them wherever you need, share and collaborate with friends,
             family, and co-workers.</p>
         </div>
-        <div class="emailformone">
-          <form>
-            <label for="email" name="email">
-              <input type="email" class="emailBox" />
-              <input type="submit" value="Get Started" />
-            </label>
-          </form>
-        </div>
+
+        <form class="emailform">
+          <div class="emailformone">
+            <label for="email"></label>
+            <input type="email" class="email email_input_error" name="email" placeholder="Enter your email" />
+            <input type="button" value="Get Started" class="submit" />
+          </div>
+        </form>
       </div>
+
 
       <div class="imageone">
         <img src="images/illustration-1.svg" alt="illustration-1" />
@@ -117,11 +65,18 @@
         </div>
 
         <div class="testimonial">
-          <img src="images/avatar-testimonial.jpg" alt="profile" />
-          <p>Fylo has improved our team productivity by an order of magnitude. Since
+          <img src="images/icon-quotes.svg" id="quotes" alt="quotes" />
+          <p id="quotetext">Fylo has improved our team productivity by an order of magnitude. Since
             making the switch our team has become a well-oiled collaboration machine.</p>
-          <p>Kyle Burton</p>
-          <p>Founder & CEO, Huddle</p>
+          <div class="profile">
+            <div class="profileimg">
+              <img src="images/avatar-testimonial.jpg" alt="profile" />
+            </div>
+            <div class="details">
+              <p>Kyle Burton</p>
+              <p>Founder & CEO, Huddle</p>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -138,11 +93,10 @@
         </p>
       </div>
       <div class="emailformtwo">
-
-        <form>
+        <form method="POST">
           <label for="email" name="email">
-            <input type="email" class="emailBox" />
-            <input type="submit" value="Get Started For Free" />
+            <input type="email" class="emailBox" placeholder="Enter your email" />
+            <button type="button" class="submit">Get Started For Free</button>
           </label>
         </form>
       </div>
@@ -153,44 +107,54 @@
   <footer>
     <div class="boxone">
       <div class="logo">
-        <img src="images/logo.svg" alt="logo" />
+        <img src="images/logo1.svg" alt="logo" />
       </div>
+      <!-- phone -->
       <div class="phone">
-        <img src="images/icon-phone.svg" alt="phone" />
-        <p>Phone: +1-543-123-4567</p>
+        <div class="phoneimg">
+          <img src="images/icon-phone.svg" alt="phone" />
+        </div>
+        <div class="phonenum">
+          <p>Phone: +1-543-123-4567</p>
+        </div>
       </div>
-      <div class="email">
-        <img src="images/icon-email.svg" alt="phone" />
-        <p> example@fylo.com</p>
+      <!-- email -->
+      <div class="emailfooter">
+        <div class="emailimg">
+          <img src="images/icon-email.svg" alt="phone" />
+        </div>
+        <div class="emailadd">
+          <p> example@fylo.com</p>
+        </div>
       </div>
     </div>
 
     <div class="boxtwo">
-      <ul>
-        <li>About Us</li>
-        <li>Jobs</li>
-        <li>Press</li>
-        <li>Blog</li>
-      </ul>
+
+      <p>About Us</p>
+      <p>Jobs</p>
+      <p>Press</p>
+      <p>Blog</p>
+
     </div>
 
     <div class="boxthree">
-      <ul>
-        <li>Contact Us</li>
-        <li>Terms</li>
-        <li>Privacy</li>
-      </ul>
+
+      <p>Contact Us</p>
+      <p>Terms</p>
+      <p>Privacy</p>
+
     </div>
 
     <div class="social">
       <div class="fb">
-
+        <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
       </div>
       <div class="tweet">
-
+        <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
       </div>
       <div class="ig">
-
+        <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
       </div>
     </div>
   </footer>
